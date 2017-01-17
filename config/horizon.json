@@ -1,8 +1,11 @@
 {
     "project_name": "example",
     "rdb_host": "127.0.0.1",
-    "rdb_user": "admin",
+    "auto_create_index": true,
+    "permissions": false,
     "auth": {
+       "allow_anonymous": true,
+       "allow_unauthenticated": true,
        "token_secret": "my_super_secret"
     }
 }
