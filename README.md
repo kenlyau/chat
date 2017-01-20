@@ -7,6 +7,8 @@
 
 #### 3 npm i
 
+#### 5 npm run build
+
 #### 4 npm start
 
 
