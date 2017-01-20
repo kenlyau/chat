@@ -11,6 +11,7 @@ export default {
     methods: {
         init: function(){
             this.user.id = session.get();
+            this.user.avatar = "//www.gravatar.com/wavatar/" + this.user.id;
         }
     },
     created: function(){
@@ -22,7 +23,7 @@ export default {
 <template>
 <div class="sessions">
     <div class="avatar">
-       <img src="//placeimg.com/72/72/people">
+       <img :src="user.avatar">
        <p>{{user.id}}</p>
     </div>
     <dl>

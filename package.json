@@ -27,6 +27,7 @@
     "@horizon/client": "^2.0.0",
     "@horizon/server": "^2.0.0",
     "express": "^4.14.0",
+    "jsonwebtoken": "^7.2.1",
     "uuid": "^3.0.1",
     "vue": "^2.1.8"
   },

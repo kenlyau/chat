@@ -1,5 +1,5 @@
 <script>
-import {messagesStorage, session} from "../store";
+import {fetchInit, messagesStorage, session} from "../store";
 
 export default {
     data: function(){
@@ -9,8 +9,10 @@ export default {
     },
     methods: {
         watchMessages: function(){
-           messagesStorage.change().subscribe(res => {
+           fetchInit().then(() => {
+             messagesStorage.change().subscribe(res => {
                 this.msgs = res;
+             })
            })
         }
     },
@@ -36,6 +38,7 @@ export default {
     }
     .scroll-content {
          height: 100%;
+         padding: 0 10px;
          overflow-y: auto;
     }
 </style>

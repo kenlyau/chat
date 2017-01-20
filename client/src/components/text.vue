@@ -20,11 +20,17 @@ export default {
 }
 </script>
 <template>
+<div>
 <textarea @keyup.enter.prevent="onSend" v-model="newMessage" placeholder="Press enter send a message"></textarea>
+</div>
 </template>
 <style scoped>
+div {
+   margin: 0 10px;
+   position: relative;
+}
 textarea {
-    position: relative;
+    position: absolute;
     top: -100px;
     width: 100%;
     height: 80px;

@@ -9,22 +9,21 @@ export default {
 </script>
 <template>
 <div id="app" class="app">
-    <div class="container">
-         <div class="side">
-              <sessions></sessions>
+         <div class="content-box">
+                  <div class="side">
+                      <sessions></sessions>
+                  </div>
+                  <div class="main">
+                      <messages></messages>
+                      <text-box></text-box>
+                  </div>
          </div>
-         <div class="main">
-              <messages></messages>
-              <text-box></text-box>
-         </div>
-    </div>
 </div>
 </template>
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html, body, .app {
+    height: 100%;
+    min-height: 380px;
 }
 body {
     font-size: 14px;
@@ -33,25 +32,28 @@ body {
 ul,li,dl,dt,dd {
     list-style: none;
 }
-
-.container {
-    width: 600px;
-    height: 500px;
-    margin: 60px auto;
-    overflow:hidden;
-    box-shadow: 0 0 12px 2px #999;
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f5f5f5;
 }
-.side {
-    width: 200px;
+::-webkit-scrollbar-thumb {
+    background-color: #2b5060
+}
+.content-box {
+    height: 100%;
+    overflow:hidden;
+}
+.side{
     height: 100%;
     background: #2B5060;
     color: #fff;
     float: left;
+    width: 30%;
 }
 .main {
-    width: 400px;
-    padding: 0 10px;
     height: 100%;
     float: left;
+    width: 70%;
+
 }
 </style>
