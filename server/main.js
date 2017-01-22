@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const horizon = require("@horizon/server");
 const horizonOptions = require("../config/horizon");
 const jwt = require("jsonwebtoken");
@@ -6,6 +7,7 @@ const jwt = require("jsonwebtoken");
 const port = 8181;
 const app = express();
 app.use(express.static('client'));
+app.use(cors());
 
 const httpServer = app.listen(port);
 
@@ -22,7 +24,6 @@ function generateToken(tokensecret, id){
 }
 
 app.get('/login', function(req, res) {
-    console.log(req.query.id);
     var result = {
         token: generateToken(horizonOptions.auth.token_secret,req.query.id)
     };

@@ -12,6 +12,7 @@ export default {
            fetchInit().then(() => {
              messagesStorage.change().subscribe(res => {
                 this.msgs = res;
+                this.$el.querySelector(".scroll-content").scrollTop = 99999;
              })
            })
         }

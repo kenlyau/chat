@@ -536,6 +536,7 @@ webpackJsonp([0],{
 	            (0, _store.fetchInit)().then(function () {
 	                _store.messagesStorage.change().subscribe(function (res) {
 	                    _this.msgs = res;
+	                    _this.$el.querySelector(".scroll-content").scrollTop = 99999;
 	                });
 	            });
 	        }
@@ -580,7 +581,7 @@ webpackJsonp([0],{
 	            return;
 	        }
 
-	        fetch("/login").then(function (res) {
+	        fetch("http://portal.xiandusi.com:8181/login").then(function (res) {
 	            return res.json();
 	        }).then(function (res) {
 	            init(res.token);

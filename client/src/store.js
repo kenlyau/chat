@@ -10,7 +10,7 @@ var fetchInit = function(){
             return;
         }
 
-        fetch("/login")
+        fetch("http://portal.xiandusi.com:8181/login")
         .then(function(res){return res.json()})
         .then(function(res){
             init(res.token);
