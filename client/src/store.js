@@ -61,7 +61,7 @@ var messagesStorage = {
          });
     },
     change: function(){
-         return messages.watch()
+         return messages.order('time', 'descending').limit(20).watch()
     }
     
 };

@@ -2,6 +2,7 @@
     "project_name": "example",
     "rdb_host": "127.0.0.1",
     "permissions": false,
+    "auto_create_index": true,
     "auth": {
        "token_secret": "my_super_secret"
     }

@@ -1,4 +1,5 @@
 <script>
+import {orderBy} from "lodash";
 import {fetchInit, messagesStorage, session} from "../store";
 
 export default {
@@ -11,7 +12,7 @@ export default {
         watchMessages: function(){
            fetchInit().then(() => {
              messagesStorage.change().subscribe(res => {
-                this.msgs = res;
+                this.msgs = orderBy(res,'time', 'asc');
                 this.$el.querySelector(".scroll-content").scrollTop = 99999;
              })
            })
